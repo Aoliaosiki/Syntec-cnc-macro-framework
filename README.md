@@ -1,6 +1,6 @@
 # Syntec CNC 宏程序维护框架
 
-![Release](https://img.shields.io/badge/release-2026.11.25-blue)
+![Release](https://img.shields.io/badge/release-0.1.0-blue)
 ![Agent](https://img.shields.io/badge/agent-Codex%20%7C%20Claude%20%7C%20CodeBuddy-lightgrey)
 ![Focus](https://img.shields.io/badge/focus-CNC%20macro-orange)
 ![License](https://img.shields.io/badge/license-custom-red)
@@ -374,12 +374,19 @@ syntec-cnc-macro-framework/
 
 | 项 | 说明 |
 |---|---|
-| 当前发布 | `2026.11.25`，见 `BUILD-INFO.json` 的 `builtAt` |
+| 当前版本 | `0.1.0`（2026-11-25） |
+| 版本文件 | `VERSION`，构建时同步写入 `BUILD-INFO.json` 与 README |
 | 知识源 | 私人版为唯一知识源，本仓库是脱敏后的公开投影 |
 | 构建校验 | frontmatter、引用完整性、表格结构、页面 ID、绝对路径、denylist、BOM/零宽 |
 | 更新方式 | 私人版更新 → 人工同步通用方法到公开模板 → 重新构建发布 |
 
 本仓库是**生成产物**，直接修改这里的文件会在下次构建时被覆盖。发现方法错误或有通用性建议，请提 issue 说明场景；涉及具体客户/机型的内容请不要贴到公开区。
+
+### 版本记录
+
+| 版本 | 日期 | 内容 |
+|---|---|---|
+| `0.1.0` | 2026-11-25 | 首个公开版：框架入口、宏核心、改动手册、L2 接入流程、合成示例 |
 
 ## 许可与免责
 
