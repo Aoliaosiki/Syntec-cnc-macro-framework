@@ -1,9 +1,11 @@
-# Syntec CNC 宏程序维护框架
+# Syntec CNC 宏程序维护框架（v0.1.0）
 
-![Release](https://img.shields.io/badge/release-0.1.0-blue)
+[![Release](https://img.shields.io/badge/release-v0.1.0-blue)](../../releases)
 ![Agent](https://img.shields.io/badge/agent-Codex%20%7C%20Claude%20%7C%20CodeBuddy-lightgrey)
 ![Focus](https://img.shields.io/badge/focus-CNC%20macro-orange)
 ![License](https://img.shields.io/badge/license-custom-red)
+
+**当前版本：v0.1.0** ｜ 发布：2026-11-25 ｜ [Release](../../releases) ｜ [更新记录](CHANGELOG.md) ｜ [下载最新版](../../releases/latest)
 
 一套给 AI Agent 用的**新代（Syntec）CNC 宏程序维护方法框架**：把「拿到一个备份或交付包 → 认出每个宏是干什么的 → 判断改一处要同步哪些文件 → 改完自检 → 交付」这件事，固化成可复用的流程、指纹表和检查清单。
 
@@ -26,6 +28,7 @@
 - [安全边界](#安全边界)
 - [能力分级 L1 / L2 / L3](#能力分级-l1--l2--l3)
 - [安装](#安装)
+- [下载](#下载)
 - [快速开始](#快速开始)
 - [标准工作流](#标准工作流)
 - [知识库导航](#知识库导航)
@@ -130,6 +133,27 @@
 ```text
 用 syntec-cnc-macro-framework 说出五条原则，并说明 L1 和 L2 的区别。
 ```
+
+## 下载
+
+不想用 git 时，直接从 Release 取打包好的 skill：
+
+| 文件 | 说明 |
+|---|---|
+| `syntec-cnc-macro-framework-0.1.0.zip` | 解压后得到 `syntec-cnc-macro-framework/`，直接放进 skills 目录 |
+| `syntec-cnc-macro-framework-0.1.0.zip.sha256` | 下载后先校验 |
+
+```powershell
+# Windows
+Get-FileHash .\syntec-cnc-macro-framework-0.1.0.zip -Algorithm SHA256
+```
+
+```bash
+# macOS / Linux
+shasum -a 256 syntec-cnc-macro-framework-0.1.0.zip
+```
+
+校验值应与 `.sha256` 文件中的一致；不一致就不要安装。
 
 ## 快速开始
 
@@ -335,6 +359,8 @@ syntec-cnc-macro-framework/
 │  └─ example-macro.md          # 纯合成示例
 ├─ SANITIZATION-REPORT.md       # 公开版脱敏与自检记录
 ├─ BUILD-INFO.json              # 构建信息与校验结果
+├─ VERSION                      # 版本号唯一来源
+├─ CHANGELOG.md                 # 更新记录
 ├─ README.md
 ├─ LICENSE
 └─ .gitignore
@@ -374,8 +400,10 @@ syntec-cnc-macro-framework/
 
 | 项 | 说明 |
 |---|---|
-| 当前版本 | `0.1.0`（2026-11-25） |
+| 当前版本 | `v0.1.0`（2026-11-25） |
 | 版本文件 | `VERSION`，构建时同步写入 `BUILD-INFO.json` 与 README |
+| 发布页 | [Releases](../../releases)，tag 使用 `v` 前缀 |
+| 更新记录 | [CHANGELOG.md](CHANGELOG.md) |
 | 知识源 | 私人版为唯一知识源，本仓库是脱敏后的公开投影 |
 | 构建校验 | frontmatter、引用完整性、表格结构、页面 ID、绝对路径、denylist、BOM/零宽 |
 | 更新方式 | 私人版更新 → 人工同步通用方法到公开模板 → 重新构建发布 |
@@ -386,7 +414,9 @@ syntec-cnc-macro-framework/
 
 | 版本 | 日期 | 内容 |
 |---|---|---|
-| `0.1.0` | 2026-11-25 | 首个公开版：框架入口、宏核心、改动手册、L2 接入流程、合成示例 |
+| `v0.1.0` | 2026-11-25 | 首个公开版：框架入口、宏核心、改动手册、L2 接入流程、合成示例 |
+
+完整记录见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 许可与免责
 
