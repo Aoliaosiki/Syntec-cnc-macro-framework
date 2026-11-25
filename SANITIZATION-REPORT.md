@@ -71,7 +71,7 @@ rg -n "<customer-name-list>|<person-name-list>" .
 |---|---|
 | `SKILL.md` frontmatter | 通过；`name=syntec-cnc-macro-framework`，YAML 可解析 |
 | 目录名与 `name` | 一致（`syntec-cnc-macro-framework`） |
-| 引用完整性 | 4 个 `references/`、`examples/` 引用全部存在，0 断链 |
+| 引用完整性 | 所有 `references/`、`examples/` 引用存在，0 断链 |
 | Markdown 表格 | 0 结构问题 |
 | 清单项数 | A=10、B=5、C=15、C2=6、C3=6，与标题一致 |
 | 编码 | 全部 UTF-8 无 BOM；无绝对用户目录路径 |
